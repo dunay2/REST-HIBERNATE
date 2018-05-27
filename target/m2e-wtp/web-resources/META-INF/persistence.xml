@@ -1,0 +1,41 @@
+
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+         version="2.0">
+<persistence-unit name="WebApplicationPU">
+  <provider>org.hibernate.ejb.HibernatePersistence</provider>
+  <jta-data-source>java:/DefaultDS</jta-data-source>
+  <mapping-file>ormap.xml</mapping-file>
+  <jar-file>MyApp.jar</jar-file>
+  <class>org.acme.Employee</class>
+  <class>org.acme.Person</class>
+  <class>org.acme.Address</class>
+  <properties>
+     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+     <property name="hibernate.connection.password">XXXXXX</property>
+     <property name="hibernate.connection.url">jdbc:mysql://<hostname>/<database></property>
+     <property name="hibernate.connection.username">XXXXX</property>
+     <property name="hibernate.default_schema">XXXXXX</property>
+     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+   </properties>
+  </persistence-unit>
+ 
+  -->
+  
+  <?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="WebApplication1PU" transaction-type="JTA">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <jta-data-source>jdbc:h2:~/DBUserWeb</jta-data-source>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties/>
+  </persistence-unit>
+</persistence>
+  
+  
+  
+  
+</persistence>

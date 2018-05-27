@@ -1,0 +1,10 @@
+select * from TM_ROLES
+
+drop table TM_ROLES
+
+
+
+CREATE   TABLE TM_ROLES (
+    iduser   NUMERIC NOT NULL,
+    rolename   varchar (30) NOT NULL
+);

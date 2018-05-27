@@ -1,0 +1,37 @@
+
+
+ALTER TABLE "TM_USERS" ADD CONSTRAINT user_pk PRIMARY KEY ( iduser );
+
+CREATE   TABLE TM_ROLES (
+    iduserrole    NUMERIC NOT NULL,
+    iduser   NUMERIC NOT NULL,
+    idrole   NUMERIC NOT NULL
+);
+
+ALTER TABLE TM_ROLES ADD CONSTRAINT userrole_pk PRIMARY KEY ( iduserrole );
+
+ALTER TABLE TM_ROLES ADD CONSTRAINT userrole__un UNIQUE ( iduser,
+                                                          idrole );
+
+ALTER TABLE TM_ROLES
+    ADD CONSTRAINT userrole_user_fk FOREIGN KEY ( iduser )
+        REFERENCES "TM_USERS" ( iduser );
+
+        
+        insert into TM_USERS 
+			VALUES (1, 1, password)
+        
+select * from tm_users
+			
+			
+		INSERT INTO  TM_ROLES (IDUSERROLE, IDUSER, IDROLE) 
+	VALUES (1, 1, 1)
+INSERT INTO TM_ROLES (IDUSERROLE, IDUSER, IDROLE) 
+	VALUES (2, 1, 2)
+INSERT INTO TM_ROLES (IDUSERROLE, IDUSER, IDROLE) 
+	VALUES (3, 2, 2)
+	
+	
+	
+	
+	
